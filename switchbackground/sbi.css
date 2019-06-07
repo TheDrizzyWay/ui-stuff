@@ -1,0 +1,50 @@
+body {
+/* fallback */
+  background-color: #00563D;
+  background-image: url(images/linear_bg_1.png);
+  background-repeat: repeat-y;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from(#00563D), to(#F7E611));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, #F7E611, #00563D);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #F7E611, #00563D);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #F7E611, #00563D);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #F7E611, #00563D);
+}
+
+.wrapper {
+  float:left;
+  display:inline;
+}
+
+figure {
+  width:200px;
+  height:300px;
+  overflow:hidden;
+  background-image: url('http://placeskull.com/200/300/158409/13');
+  transition: all 1s ease-in-out;
+  background-repeat: repeat-n;
+  margin: 5px;
+}
+
+figure:hover {
+  overflow:hidden;
+  -webkit-animation: switch 5s infinite; /* Chrome, Safari, Opera */
+  animation: switch 5s infinite;
+  background-repeat: repeat-n;
+}
+
+@-webkit-keyframes switch {
+    0% {background-image: url('http://placeskull.com/200/300/158409/13');}
+    30% {background-image: url('http://placeskull.com/200/300/EE5050/07');}
+    60% {background-image: url('http://placeskull.com/200/300/001245/44');}
+    100% {background-image: url('http://placeskull.com/200/300/158409/13');}
+}
