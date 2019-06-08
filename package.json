@@ -1,0 +1,22 @@
+{
+  "name": "ui-stuff",
+  "version": "1.0.0",
+  "description": "Playing around with ui/ux",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass landing/landing.scss landing/landing.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheDrizzyWay/ui-stuff.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheDrizzyWay/ui-stuff/issues"
+  },
+  "homepage": "https://github.com/TheDrizzyWay/ui-stuff#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
