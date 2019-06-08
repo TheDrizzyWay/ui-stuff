@@ -4,7 +4,7 @@
   "description": "Playing around with ui/ux",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass landing/landing.scss landing/landing.css -w"
+    "compile": "node-sass landing/sass/landing.scss landing/landing.css -w"
   },
   "repository": {
     "type": "git",
