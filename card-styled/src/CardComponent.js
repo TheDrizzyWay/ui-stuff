@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaCommentAlt, FaThumbsUp, FaRegEye } from 'react-icons/fa'
-import Card from './Card'
+import { FaCommentAlt, FaThumbsUp, FaRegEye } from 'react-icons/fa';
+import Card from './Card';
+
 const StyledRoot = styled.div`
   padding: 50px 12px;
 `;
@@ -15,8 +16,8 @@ const StyledContainer = styled.div`
 const CardComponent = () => {
   const date = new Date().toLocaleDateString();
   const onCommentClick = () => alert('You clicked comments');
-  const onLikesClick = () => alert('You clicked comments');
-  const onViewsClick = () => alert('You clicked comments');
+  const onLikesClick = () => alert('You clicked likes');
+  const onViewsClick = () => alert('You clicked views');
   const buttons = [
     {
       label: (

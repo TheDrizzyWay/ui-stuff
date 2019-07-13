@@ -81,8 +81,8 @@ const Card = ({
     <Date>{date}</Date>
     <Description>{description}</Description>
     <Actions>
-      {actions.map(({ label }) => (
-        <Action>{label}</Action>
+      {actions.map(({ label, onClick }) => (
+        <Action onClick={onClick}>{label}</Action>
       ))}
     </Actions>
   </StyledContainer>
