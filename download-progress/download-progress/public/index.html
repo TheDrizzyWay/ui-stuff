@@ -2,9 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -34,35 +39,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <!-- <script>
-      // (function (c, h, r, i, s, t, o) {
-      //     c['9PayWidget']=i; c[i] = c[i] || function () { (c[i].q = c[i].q || []).push(arguments) };
-      //     t = h.createElement(r), o = h.getElementsByTagName(r)[0];
-      //     t.id = i; t.src = s; t.async = 1; o.parentNode.insertBefore(t, o);
-      // }(window, document, 'script', 'emts', 'http://10.161.11.67/js-widget/widget.js'));
-      // emts('init', { id: 195690401, btn: { top: 90, left: 75 }, form: { top: 45, left: 70 } });
-  </script> -->
-  <script src="https://checkout.seerbitapi.com/api/v1/seerbit.js"></script>
-  <script>
-    function paywithSeerbit() {
-      SeerbitPay({
-      "tranref": new Date().getTime(),
-      "currency": "NGN",
-      "description": "TEST",
-      "country": "NG",
-      "amount": "100.00",
-      "callbackurl": "http://localhost:3000/",
-      "public_key":"SBTESTPUBK_BuEgsFGvPm9NJQTwfj5coGXLrjex33Ab", //replace this with your own public key 
-     }, 
-     function callback(response) {
-      console.log(response) /*response of transaction*/
-     }, 
-     function close(close) {
-      console.log(close) /*transaction close*/
-     })
-    }
-
-    paywithSeerbit();
-   </script>
   </body>
 </html>
