@@ -1,36 +1,29 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './App.css';
 
 const App = () => {
   const [percentage, setPercentage] = useState(0);
   const [progress, setProgress] = useState(null);
 
-  const simulateDownload = (progress) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(progress + 1);
-        }, 50);
-    }).then(res => res);
-  };
-
-  const download = () => { 
-    const documentStyles = document.documentElement.style;
-    setProgress('in-progress');
-    
-      (async () => {
-          let progress = 0;
-
-          while (progress < 100) {
-              progress = await simulateDownload(progress);
-
-              if (progress % 5 === 0) {
-                documentStyles.setProperty('--progress', `${progress}%`);
-              }
+  const download = () => {
+      const documentStyles = document.documentElement.style;
+      let progress = 0;
+  
+      setProgress('in-progress');
+  
+      axios({
+          url: 'https://www.placecage.com/3499/3499',
+          onDownloadProgress(progressEvent) {
+              progress = Math.round((progressEvent.loaded / progressEvent.total) * 100);
+  
               setPercentage(progress);
+  
+              documentStyles.setProperty('--progress', `${progress}%`);
           }
-
-          setTimeout(() => setProgress('finished'), 1000);
-      })();
+      }).then(() => {
+          setProgress('finished');
+      });
   };
 
   return (
